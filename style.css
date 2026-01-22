@@ -91,10 +91,11 @@ section {
   text-decoration: none;
 }
 
-/* TRUST SECTION */
+/* TRUST SECTION – PREMIUM INLINE SVG */
+
 .trust-section {
   background: #F8FAFF;
-  padding: 70px 20px;
+  padding: 80px 20px;
 }
 
 .trust-grid {
@@ -106,12 +107,17 @@ section {
   text-align: center;
 }
 
-.trust-item img {
-  width: 60px;
-  height: 60px;
+.trust-item {
+  padding: 20px;
+}
+
+.trust-svg {
+  width: 64px;
+  height: 64px;
+  fill: none;
+  stroke: #D4AF37; /* dourado */
+  stroke-width: 1.8;
   margin-bottom: 20px;
-  filter: brightness(0) saturate(100%) invert(58%) sepia(91%)
-          saturate(347%) hue-rotate(6deg) brightness(95%) contrast(92%);
 }
 
 .trust-item h3 {
@@ -125,6 +131,18 @@ section {
   color: #475569;
 }
 
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .trust-grid {
