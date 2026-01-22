@@ -13,20 +13,13 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
-  color: #0A2540;
-}
-
 section {
   padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
 }
 
-/* =========================
-   HERO WITH VIDEO
-========================= */
-
+/* HERO WITH VIDEO */
 .hero-video {
   position: relative;
   height: 100vh;
@@ -60,7 +53,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #FFFFFF;
+  color: white;
   padding: 20px;
 }
 
@@ -68,22 +61,17 @@ section {
   font-size: 3rem;
   max-width: 900px;
   margin-bottom: 20px;
-  color: #FFFFFF;
 }
 
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 30px;
-  max-width: 700px;
 }
-
-/* HERO BUTTONS */
 
 .hero-buttons {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .btn-primary {
@@ -91,40 +79,44 @@ section {
   color: white;
   padding: 16px 34px;
   border-radius: 40px;
-  font-weight: 700;
+  font-weight: bold;
   text-decoration: none;
-  font-size: 16px;
-}
-
-.btn-primary:hover {
-  background: #004FCC;
 }
 
 .btn-secondary {
-  background: transparent;
   border: 2px solid white;
   color: white;
   padding: 16px 34px;
   border-radius: 40px;
-  font-weight: 700;
   text-decoration: none;
 }
 
-/* =========================
-   ABOUT
-========================= */
-
-.about p {
-  text-align: center;
-  font-size: 1.1rem;
-  max-width: 900px;
-  margin: auto;
+/* TRUST SECTION */
+.trust-section {
+  background: #F8FAFF;
+  padding: 80px 20px;
 }
 
-/* =========================
-   SERVICES
-========================= */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
 
+.trust-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D4AF37, #F5D76E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: 0 auto 20px;
+}
+
+/* SERVICES */
 .services h2,
 .steps h2,
 .contact h2 {
@@ -139,45 +131,23 @@ section {
 }
 
 .service-card {
-  background: #FFFFFF;
+  background: white;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-}
-
-.service-card h3 {
-  margin-bottom: 12px;
-  color: #0A2540;
-}
-
-.service-card p {
-  margin-bottom: 20px;
 }
 
 .service-cta {
   display: inline-block;
+  margin-top: 15px;
   padding: 10px 22px;
   background: #0066FF;
   color: white;
-  text-decoration: none;
   border-radius: 30px;
-  font-weight: 600;
-  font-size: 14px;
+  text-decoration: none;
 }
 
-.service-cta:hover {
-  background: #004FCC;
-}
-
-/* =========================
-   HOW IT WORKS
-========================= */
-
+/* STEPS */
 .steps {
   background: #EAF1FF;
   border-radius: 20px;
@@ -193,14 +163,10 @@ section {
   background: white;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-/* =========================
-   CONTACT
-========================= */
-
+/* CONTACT */
 .contact-form {
   max-width: 520px;
   margin: auto;
@@ -217,7 +183,6 @@ section {
   margin-bottom: 18px;
   border-radius: 8px;
   border: 1px solid #CBD5E1;
-  font-size: 15px;
 }
 
 .contact-form button {
@@ -227,19 +192,10 @@ section {
   width: 100%;
   border: none;
   border-radius: 40px;
-  font-size: 16px;
   font-weight: bold;
-  cursor: pointer;
 }
 
-.contact-form button:hover {
-  background: #004FCC;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer {
   background: #0A2540;
   color: white;
@@ -247,10 +203,7 @@ footer {
   padding: 35px 20px;
 }
 
-/* =========================
-   WHATSAPP FLOAT
-========================= */
-
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -259,32 +212,13 @@ footer {
   color: white;
   padding: 14px 18px;
   border-radius: 50px;
-  font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-  z-index: 999;
+  font-weight: bold;
 }
 
-.whatsapp-float:hover {
-  background: #1ebe5d;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    padding: 14px 24px;
-    font-size: 15px;
   }
 }
