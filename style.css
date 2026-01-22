@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,9 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* GLOBAL */
+/* =========================
+   GLOBAL
+========================= */
 body {
   background: #FFFFFF;
   color: #1F2937;
@@ -19,7 +23,9 @@ section {
   margin: auto;
 }
 
-/* HERO WITH VIDEO */
+/* =========================
+   HERO WITH VIDEO
+========================= */
 .hero-video {
   position: relative;
   height: 100vh;
@@ -74,6 +80,7 @@ section {
   flex-wrap: wrap;
 }
 
+/* BUTTONS */
 .btn-primary {
   background: #0066FF;
   color: white;
@@ -81,6 +88,10 @@ section {
   border-radius: 40px;
   font-weight: bold;
   text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #004FCC;
 }
 
 .btn-secondary {
@@ -91,8 +102,13 @@ section {
   text-decoration: none;
 }
 
-/* TRUST SECTION – PREMIUM INLINE SVG */
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.15);
+}
 
+/* =========================
+   TRUST SECTION – PREMIUM
+========================= */
 .trust-section {
   background: #F8FAFF;
   padding: 80px 20px;
@@ -131,31 +147,9 @@ section {
   color: #475569;
 }
 
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .trust-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .trust-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .trust-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .trust-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* SERVICES */
+/* =========================
+   SERVICES
+========================= */
 .services h2,
 .steps h2,
 .contact h2 {
@@ -174,6 +168,11 @@ section {
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
 }
 
 .service-cta {
@@ -184,9 +183,12 @@ section {
   color: white;
   border-radius: 30px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-/* STEPS */
+/* =========================
+   STEPS
+========================= */
 .steps {
   background: #EAF1FF;
   border-radius: 20px;
@@ -205,7 +207,9 @@ section {
   text-align: center;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 .contact-form {
   max-width: 520px;
   margin: auto;
@@ -232,9 +236,16 @@ section {
   border: none;
   border-radius: 40px;
   font-weight: bold;
+  cursor: pointer;
 }
 
-/* FOOTER */
+.contact-form button:hover {
+  background: #004FCC;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
   background: #0A2540;
   color: white;
@@ -242,7 +253,9 @@ footer {
   padding: 35px 20px;
 }
 
-/* WHATSAPP */
+/* =========================
+   WHATSAPP FLOAT
+========================= */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -253,11 +266,26 @@ footer {
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
+  z-index: 999;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
   }
 }
