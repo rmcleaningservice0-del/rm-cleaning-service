@@ -289,3 +289,28 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   SCHEDULE BUBBLE
+========================= */
+
+.schedule-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  padding: 10px 18px;
+  background: #EAF1FF;
+  color: #0A2540;
+  border-radius: 999px; /* formato balão */
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.schedule-bubble:hover {
+  background: #0066FF;
+  color: white;
+  transform: translateY(-2px);
+}
