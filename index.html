@@ -1,25 +1,138 @@
-<form 
-  class="contact-form"
-  action="https://formspree.io/f/mrepglay"
-  method="POST"
-  onsubmit="sendWhatsAppMessage(event)"
->
-  <input type="text" name="name" placeholder="Full Name" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RM Cleaning Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <input type="email" name="email" placeholder="Email Address" required>
+<body>
 
-  <input type="tel" name="phone" placeholder="Phone Number" required>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/31686424550" class="whatsapp-float" target="_blank">
+  💬 Chat on WhatsApp
+</a>
 
-  <select name="service" required>
-    <option value="">Select a service</option>
-    <option>Regular Cleaning</option>
-    <option>Deep Cleaning</option>
-    <option>Move-In / Move-Out</option>
-    <option>Post-Construction</option>
-    <option>Office / Airbnb</option>
-  </select>
+<!-- HERO -->
+<header class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="video-cleaning.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
 
-  <textarea name="message" placeholder="Property details" required></textarea>
+  <div class="hero-content">
+    <h1>Professional Cleaning Services in the Netherlands</h1>
+    <p>Residential & commercial cleaning with quality, trust and excellence.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+      <a href="https://wa.me/31686424550" class="btn-secondary">WhatsApp Us</a>
+    </div>
+  </div>
+</header>
 
-  <button type="submit">Get My Free Quote</button>
-</form>
+<!-- SERVICES -->
+<section class="services">
+  <h2>Our Services</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <h3>Regular Cleaning</h3>
+      <p>Weekly or biweekly cleaning to keep your home clean and organized.</p>
+      <a href="#contact" class="schedule-bubble" data-service="Regular Cleaning">
+        Schedule Now
+      </a>
+    </div>
+
+    <div class="service-card">
+      <h3>Deep Cleaning</h3>
+      <p>Intensive and detailed cleaning for a complete refresh.</p>
+      <a href="#contact" class="schedule-bubble" data-service="Deep Cleaning">
+        Schedule Now
+      </a>
+    </div>
+
+    <div class="service-card">
+      <h3>Move-In / Move-Out</h3>
+      <p>Perfect for rentals, sales or new residents.</p>
+      <a href="#contact" class="schedule-bubble" data-service="Move-In / Move-Out">
+        Schedule Now
+      </a>
+    </div>
+
+    <div class="service-card">
+      <h3>Post-Construction</h3>
+      <p>Removal of dust and debris after renovations.</p>
+      <a href="#contact" class="schedule-bubble" data-service="Post-Construction">
+        Schedule Now
+      </a>
+    </div>
+
+    <div class="service-card">
+      <h3>Office & Airbnb</h3>
+      <p>Professional cleaning for commercial spaces.</p>
+      <a href="#contact" class="schedule-bubble" data-service="Office / Airbnb">
+        Schedule Now
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+
+  <form
+    class="contact-form"
+    action="https://formspree.io/f/mrepglay"
+    method="POST"
+    onsubmit="sendWhatsAppMessage(event)"
+  >
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+    <select name="service" id="serviceSelect" required>
+      <option value="">Select a service</option>
+      <option>Regular Cleaning</option>
+      <option>Deep Cleaning</option>
+      <option>Move-In / Move-Out</option>
+      <option>Post-Construction</option>
+      <option>Office / Airbnb</option>
+    </select>
+
+    <textarea name="message" placeholder="Property details / Message" required></textarea>
+
+    <button type="submit">Get My Free Quote</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>RM Cleaning Service</strong></p>
+  <p>📞 +31 06 86424550</p>
+  <p>✉️ rmcleaningservice0@gmail.com</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+/* PREFILL SERVICE */
+document.querySelectorAll('.schedule-bubble').forEach(button => {
+  button.addEventListener('click', () => {
+    const service = button.getAttribute('data-service');
+    const select = document.getElementById('serviceSelect');
+    if (select) select.value = service;
+  });
+});
+
+/* EMAIL + WHATSAPP */
+function sendWhatsAppMessage(event) {
+  event.preventDefault();
+  const form = event.target;
+
+  const name = form.name.value;
+  const email = form.email.value;
+  const phone = form.phone.value;
+  const service
