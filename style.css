@@ -137,9 +137,10 @@ section {
 }
 
 .trust-item h3 {
-  font-size: 17px;
+  font-size: 21px;        /* ligeiramente maior */
+  font-weight: 600;      /* mais presença sem pesar */
   color: #0A2540;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .trust-item p {
