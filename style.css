@@ -109,6 +109,8 @@ section {
 /* =========================
    TRUST SECTION – PREMIUM
 ========================= */
+/* TRUST SECTION – PREMIUM + INTERACTIVE */
+
 .trust-section {
   background: #F8FAFF;
   padding: 80px 20px;
@@ -124,9 +126,19 @@ section {
 }
 
 .trust-item {
-  padding: 20px;
+  padding: 30px 20px;
+  border-radius: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  cursor: default;
 }
 
+.trust-item:hover {
+  transform: translateY(-8px);
+  background: #FFFFFF;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ICONS */
 .trust-svg {
   width: 64px;
   height: 64px;
@@ -134,18 +146,40 @@ section {
   stroke: #D4AF37; /* dourado */
   stroke-width: 1.8;
   margin-bottom: 20px;
+  transition: transform 0.35s ease, stroke 0.35s ease;
 }
 
+.trust-item:hover .trust-svg {
+  transform: scale(1.1);
+  stroke: #1E3A8A; /* azul principal */
+}
+
+/* TITLES */
 .trust-item h3 {
-  font-size: 21px;        /* ligeiramente maior */
-  font-weight: 600;      /* mais presença sem pesar */
+  font-size: 19px;
+  font-weight: 600;
   color: #0A2540;
   margin-bottom: 10px;
 }
 
+/* TEXT */
 .trust-item p {
   font-size: 15px;
   color: #475569;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================
