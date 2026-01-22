@@ -7,6 +7,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+  <script>
+function sendWhatsAppMessage(event) {
+  event.preventDefault();
+
+  const form = event.target;
+
+  const name = form.querySelector('[name="name"]').value;
+  const email = form.querySelector('[name="email"]').value;
+  const phone = form.querySelector('[name="phone"]').value;
+  const service = form.querySelector('[name="service"]').value;
+  const message = form.querySelector('[name="message"]').value;
+
+  const whatsappText =
+    `New Cleaning Request:%0A%0A` +
+    `Name: ${name}%0A` +
+    `Email: ${email}%0A` +
+    `Phone: ${phone}%0A` +
+    `Service: ${service}%0A` +
+    `Message: ${message}`;
+
+  // envia para o e-mail
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(() => {
+    // abre WhatsApp
+    window.open(
+      `https://wa.me/31686424550?text=${whatsappText}`,
+      '_blank'
+    );
+
+    form.reset();
+  });
+}
+</script>
+  
 <body>
 
 <!-- WHATSAPP BUTTON -->
