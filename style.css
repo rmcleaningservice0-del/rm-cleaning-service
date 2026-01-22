@@ -94,28 +94,49 @@ section {
 /* TRUST SECTION */
 .trust-section {
   background: #F8FAFF;
-  padding: 80px 20px;
+  padding: 70px 20px;
 }
 
 .trust-grid {
+  max-width: 1200px;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   text-align: center;
 }
 
-.trust-icon {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #D4AF37, #F5D76E);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  margin: 0 auto 20px;
+.trust-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  filter: brightness(0) saturate(100%) invert(58%) sepia(91%)
+          saturate(347%) hue-rotate(6deg) brightness(95%) contrast(92%);
 }
 
+.trust-item h3 {
+  font-size: 17px;
+  color: #0A2540;
+  margin-bottom: 8px;
+}
+
+.trust-item p {
+  font-size: 15px;
+  color: #475569;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* SERVICES */
 .services h2,
 .steps h2,
